@@ -5,8 +5,7 @@ const {
   createUser,
   updateUser,
   deleteUser,
-  uploadUserPhoto,
-  findUserByCode,
+  uploadUserPhoto
 } = require('../controllers/users')
 
 const router = express.Router({ mergeParams: true })

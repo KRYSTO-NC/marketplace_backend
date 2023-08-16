@@ -26,6 +26,7 @@ connectDB()
 // Route files
 const auth = require('./routes/auth')
 const users = require('./routes/users')
+const products = require('./routes/products.js')
 
 // initialize express  application
 const app = express()
@@ -75,8 +76,8 @@ app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }))
 app.use(express.static(path.join(__dirname, 'public')))
 //Mount routers
 app.use(`/rfid-marketplace/api/v1/auth`, auth)
-
 app.use(`/rfid-marketplace/api/v1/users`, users)
+app.use(`/rfid-marketplace/api/v1/products`, products)
 
 //error handler
 app.use(errorHandler)

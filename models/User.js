@@ -8,7 +8,11 @@ const UserSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: [true, 'Veuillez entrer un prénom'],
+      required: [true, "Veuillez entrer un nom d'uttilisateur"],
+    },
+
+    photo: {
+      type: String
     },
 
     // Informations de connexion
@@ -52,36 +56,6 @@ UserSchema.pre('save', async function (next) {
     const salt = await bcrypt.genSalt(10)
     this.password = await bcrypt.hash(this.password, salt)
   }
-
-  // Vérification des contrats
-  await this.populate('contrats')
-
-  // Trier les contrats en fonction de leur dateDebut
-  this.contrats.sort((a, b) => a.dateDebut - b.dateDebut)
-
-  // Si l'utilisateur n'a pas encore de date d'entrée, définissez-la comme la date de début du premier contrat
-  if (!this.entryDate && this.contrats.length) {
-    this.entryDate = this.contrats[0].dateDebut
-  }
-
-  const currentDate = new Date()
-
-  // Par défaut, supposons qu'aucun contrat n'est actif
-  let hasActiveContract = false
-
-  for (let contrat of this.contrats) {
-    if (
-      contrat.dateDebut <= currentDate &&
-      (contrat.dateFin >= currentDate || !contrat.dateFin)
-    ) {
-      // Si un contrat est trouvé actif, mettre hasActiveContract à true et sortir de la boucle
-      hasActiveContract = true
-      break
-    }
-  }
-
-  // Mettre à jour le statut actif de l'utilisateur
-  this.actif = hasActiveContract
 
   next()
 })

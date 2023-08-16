@@ -1,0 +1,29 @@
+[
+    {
+        "_id": "5d7a514b5d2c12c7449be020",
+        "name": "Worktime",
+        "designation": "Optimisez la gestion de votre temps grâce à Worktime! Suivez en temps réel les pointages de vos employés grâce à la technologie RFID avancée. Garantissez une précision inégalée et simplifiez vos processus internes."
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be021",
+        "name": "Clinotag",
+        "designation": "Révolutionnez la gestion de vos opérations de ménage avec Clinotag! Suivez en temps réel les passages de vos équipes, garantissez la qualité du service et maximisez la satisfaction de vos clients. Idéal pour les entreprises de ménage cherchant à optimiser leur efficacité."
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be022",
+        "name": "Data-pilot",
+        "designation": "Avec Data-pilot, prenez le contrôle absolu de vos données. Transformez vos chiffres en informations puissantes et bénéficiez de rapports détaillés pour orienter vos décisions stratégiques."
+    },
+    {
+        "_id": "5d7a514b5d2c12c7449be023",
+        "name": "Tableau de bord",
+        "designation": "Visualisez vos données comme jamais auparavant avec nos tableaux de bord conçus avec Power BI. Accédez à des analyses en temps réel et pilotez votre entreprise avec une vision claire et détaillée."
+    },
+
+    {
+        "_id": "5d7a514b5d2c12c7449be024",
+        "type": "produit",
+        "name": "Terminal FX105",
+        "designation": "Le FX105 est le petit terminal mobile Android idéal pour vos équipes travaillant en déplacement. Petit, léger et ergonomique, il permettra à vos équipes d’être plus productives sur le terrain sans sacrifier leur confort."
+    }
+]

@@ -6,14 +6,14 @@ const sendEmail = require('../utils/sendEmail')
 const path = require('path')
 
 // @desc      Get all users
-// @route     GET /worshift/api/v1/users
+// @route     GET /rfid-marketplace/api/v1/users
 // @access    Private/Admin
 exports.getUsers = asyncHandler(async (req, res, next) => {
   res.status(200).json(res.advancedResults)
 })
 
 // @desc      Get single user
-// @route     GET /worshift/api/v1/users/:id
+// @route     GET /rfid-marketplace/api/v1/users/:id
 // @access    Private/Admin
 exports.getUser = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id)
@@ -24,7 +24,7 @@ exports.getUser = asyncHandler(async (req, res, next) => {
 })
 
 // @desc      Create user
-// @route     POST /worshift/api/v1/users
+// @route     POST /rfid-marketplace/api/v1/users
 // @access    Private/Admin
 exports.createUser = asyncHandler(async (req, res, next) => {
   const user = await User.create(req.body)
@@ -46,7 +46,7 @@ exports.createUser = asyncHandler(async (req, res, next) => {
 })
 
 // @desc      Update user
-// @route     PUT /worshift/api/v1/users/:id
+// @route     PUT /rfid-marketplace/api/v1/users/:id
 // @access    Private/Admin
 exports.updateUser = asyncHandler(async (req, res, next) => {
   const user = await User.findByIdAndUpdate(req.params.id, req.body, {
@@ -61,7 +61,7 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
 })
 
 // @desc      Delete user
-// @route     DELETE /worshift/api/v1/users/:id
+// @route     DELETE /rfid-marketplace/api/v1/users/:id
 // @access    Private/Admin
 exports.deleteUser = asyncHandler(async (req, res, next) => {
   await User.findByIdAndDelete(req.params.id)
@@ -73,7 +73,7 @@ exports.deleteUser = asyncHandler(async (req, res, next) => {
 })
 
 // @desc      Get current logged in user
-// @route     POST /worshift/api/v1/users/me
+// @route     POST /rfid-marketplace/api/v1/users/users/me
 // @access    Private
 exports.getMe = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.user.id)
@@ -85,7 +85,7 @@ exports.getMe = asyncHandler(async (req, res, next) => {
 })
 
 // @desc      Upload profile photo for user
-// @route     PUT /worshift/api/v1/users/:id/photo
+// @route     PUT /rfid-marketplace/api/v1/users/:id/photo
 // @access    Private/Admin
 exports.uploadUserPhoto = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id)
