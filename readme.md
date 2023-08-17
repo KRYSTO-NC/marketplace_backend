@@ -95,12 +95,12 @@ Ce projet est le backend du Marketplace RFID NC. Il fournit une API pour le marc
 
 #### Scripts
 
---INSERT BACKTICKS HERE--
+```
 Pour démarrer le serveur de développement:
 npm run dev
 Pour la production:
 npm start
---INSERT BACKTICKS HERE--
+```
 
 #### Variables d'Environnement
 
@@ -111,7 +111,7 @@ NODE_ENV=development
 PORT=8000
 FRONT_URL=http://localhost:3000/
 MONGO_URI=<Votre_MongoDB_URI>
-... (Et les autres variables d'environnement nécessaires.)
+
 ```
 
 ### Seeding de la Base de Données
@@ -131,4 +131,3 @@ node seeder -d
 
 ### Contributions
 
-Les Pull Requests sont les bienvenus.
